@@ -1,0 +1,376 @@
+<html>
+<head>
+<title>Epidemics in the 20th Century</title>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<style>
+    body { 
+        font-family: 'Alegreya Sans', Calibri, sans-serif; 
+    }
+
+    svg { 
+        margin: auto;
+        display: block;
+        border: solid #ccc 1px; 
+    }
+</style>
+    
+</head>
+<body>
+<svg height="900" width="1800">
+</svg>
+
+<script>
+
+var svg = d3.select("svg");
+    
+    //title
+    svg.append("text")
+    .attr("x", 35)
+    .attr("y", 45)
+    .style("font-weight", "bold")
+    .style("font-size", "2.35em")
+    .text("Epidemics in the 20th Century")
+    
+    //africa info
+    svg.append("text")
+    .attr("x", 35)
+    .attr("y", 160)
+    .style("font-size", "1.5em")
+    .text("Africa")
+    
+    svg.append("image")
+    .attr("x", 30)
+    .attr("y", 165)
+    .attr("xlink:href", "continents/africa.gif" )
+    .style("height", "75px")
+    .style("width", "75px")
+    
+    svg.append("text")
+    .attr("x", 30)
+    .attr("y", 370)
+    .style("font-size", "1.5em")
+    .text("Europe &")
+    
+    //west info
+    svg.append("text")
+    .attr("x", 15)
+    .attr("y", 390)
+    .style("font-size", "1.5em")
+    .text("The Americas")
+    
+    svg.append("image")
+    .attr("x", 45)
+    .attr("y", 395)
+    .attr("xlink:href", "continents/europe.jpg" )
+    .style("height", "50px")
+    .style("width", "55px")
+    
+    svg.append("image")
+    .attr("x", 15)
+    .attr("y", 430)
+    .attr("xlink:href", "continents/northamerica.png" )
+    .style("height", "65px")
+    .style("width", "70px")
+    
+    svg.append("image")
+    .attr("x", 75)
+    .attr("y", 435)
+    .attr("xlink:href", "continents/southamerica.jpg" )
+    .style("height", "50px")
+    .style("width", "55px")
+    
+    //asia info
+    svg.append("text")
+    .attr("x", 45)
+    .attr("y", 660)
+    .style("font-size", "1.5em")
+    .text("Asia")
+    
+    svg.append("image")
+    .attr("x", 25)
+    .attr("y", 655)
+    .attr("xlink:href", "continents/asia.jpg" )
+    .style("height", "100px")
+    .style("width", "110px")
+    
+
+function parseLine (line) {
+	return { 
+		Year: Number(line["Year"]),
+		Country: line["Country"],
+		Continent: line["Continent"],
+		Subtype: line["SubType"],
+        Name: line["Name"],
+        Killed: Number(line["Killed"]),
+	};
+}
+
+d3.tsv("epidemic.tsv", parseLine, function (error, data) {
+	
+    //scales
+	var xScale = d3.scaleLinear()
+        .domain([1900, 1999])
+        .range([150, 1550]);
+    var circleScale = d3.scaleLinear()
+        .domain([0,Math.sqrt(2500000/Math.PI)])
+        .range([0,125])
+    
+    //epidemic circles
+	var circles = svg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "circle")
+		.attr("cx", function(d) {return xScale(d.Year); })
+		.attr("cy", function(d){
+            if(d.Continent == "Africa"){
+                return 175;
+            }
+            else if(d.Continent == "Americas" || d.Continent == "Europe"){
+                return 400;
+            }
+            else if(d.Continent == "Asia"){
+                return 675;
+            }
+        })
+		.attr("r", function(d) {return circleScale(Math.sqrt(d.Killed/Math.PI))})
+        .attr("stroke", "black")
+		.style("opacity", 0.7)
+        .style("fill", function(d){
+            if(d.Subtype == "Bacterial Infectious Diseases"){
+                return '#00EB2E';
+            }
+            else if(d.Subtype == "Viral Infectious Diseases"){
+                return '#D8A404';
+            }
+            else{
+                return '#bf40bf';
+            };
+        });
+    //origin points for larger epidemics
+    var orginPoints = svg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "circle")
+		.attr("cx", function(d) {return xScale(d.Year); })
+		.attr("cy", function(d){
+            if(d.Continent == "Africa"){
+                return 175;
+            }
+            else if(d.Continent == "Americas" || d.Continent == "Europe"){
+                return 400;
+            }
+            else if(d.Continent == "Asia"){
+                return 675;
+            }
+        })
+		.attr("r", 1.75)
+		.style("opacity", function(d) {
+            if(d.Killed >= 15000){
+                return 1;
+            }
+            else{
+                return 0
+            }})
+        .style("fill", "black");
+    
+    var bottomAxis = d3.axisBottom(xScale).ticks(10).tickFormat(d3.format("d"));
+    
+    svg.append("g").call(bottomAxis)
+        .attr("transform", "translate(0,825)")
+        .attr("font-size", "14px");
+    
+    svg.append("text")
+    .attr("x", 1535)
+    .attr("y", 842)
+    .style("font-size", "14px")
+    .style("white-space", "nowrap")
+    .style("font-family", "sans-serif")
+    .text("1999");
+    
+    //continent lines
+    svg.append("line")
+    .attr("x1", xScale(1900))
+    .attr("y1", 175)
+    .attr("x2", xScale(1999))
+    .attr("y2", 175)
+    .style("opacity", 0.9)
+    .style("stroke", "gray");
+    
+    svg.append("line")
+    .attr("x1", xScale(1900))
+    .attr("y1", 400)
+    .attr("x2", xScale(1999))
+    .attr("y2", 400)
+    .style("opacity", 0.9)
+    .style("stroke", "gray");
+    
+    svg.append("line")
+    .attr("x1", xScale(1900))
+    .attr("y1", 675)
+    .attr("x2", xScale(1999))
+    .attr("y2", 675)
+    .style("opacity", 0.9)
+    .style("stroke", "gray");
+    
+    //Penicilin line
+    svg.append("line")
+    .attr("x1", xScale(1931))
+    .attr("y1", 90)
+    .attr("x2", xScale(1931))
+    .attr("y2", 825)
+    .style("stroke", "red")
+    .style("stroke-width", "2px");
+    
+    svg.append("text")
+    .attr("x", xScale(1931))
+    .attr("y", 85)
+    .style("font-size", "1.2em")
+    .text("1931 - Penicilin Invented");
+    
+    //Flu Vaccine line
+    svg.append("line")
+    .attr("x1", xScale(1938))
+    .attr("y1", 115)
+    .attr("x2", xScale(1938))
+    .attr("y2", 825)
+    .style("stroke", "red")
+    .style("stroke-width", "2px");
+    
+    svg.append("text")
+    .attr("x", xScale(1938))
+    .attr("y", 110)
+    .style("font-size", "1.2em")
+    .text("1938 - First Flu Vaccine Developed");
+    
+    //DDT line
+    svg.append("line")
+    .attr("x1", xScale(1939))
+    .attr("y1", 140)
+    .attr("x2", xScale(1939))
+    .attr("y2", 825)
+    .style("stroke", "red")
+    .style("stroke-width", "2px");
+    
+    svg.append("text")
+    .attr("x", xScale(1939))
+    .attr("y", 135)
+    .style("font-size", "1.2em")
+    .text("1939 - DDT first used as pesticide");
+    
+    //DeathScale info
+    svg.append("text")
+    .attr("x", 1645)
+    .attr("y", 100)
+    .style("font-size", "1.5em")
+    .text("Death Toll")
+    .style("text-decoration", "underline");
+    
+    svg.append("circle")
+    .attr("cx", 1620)
+    .attr("cy", 125)
+    .attr("r", circleScale(Math.sqrt(1000/Math.PI)))
+    .style("opacity", 0.6)
+    .attr("stroke", "black")
+    .style("fill", "gray");
+    
+    svg.append("text")
+    .attr("x", 1655)
+    .attr("y", 128)
+    .text("= 1,000 deaths")
+
+    svg.append("circle")
+    .attr("cx", 1620)
+    .attr("cy", 150)
+    .style("opacity", 0.6)
+    .attr("stroke", "black")
+    .attr("r", circleScale(Math.sqrt(10000/Math.PI)))
+    .style("fill", "gray");
+    
+    svg.append("text")
+    .attr("x", 1655)
+    .attr("y", 154)
+    .text("= 10,000 deaths")
+    
+    svg.append("circle")
+    .attr("cx", 1620)
+    .attr("cy", 195)
+    .style("opacity", 0.6)
+    .attr("stroke", "black")
+    .attr("r", circleScale(Math.sqrt(100000/Math.PI)))
+    .style("fill", "gray");
+    
+    svg.append("text")
+    .attr("x", 1655)
+    .attr("y", 198)
+    .text("= 100,000 deaths")
+    
+    svg.append("circle")
+    .attr("cx", 1620)
+    .attr("cy", 285)
+    .attr("r", circleScale(Math.sqrt(500000/Math.PI)))
+    .style("opacity", 0.6)
+    .attr("stroke", "black")
+    .style("fill", "gray");
+    
+    svg.append("text")
+    .attr("x", 1685)
+    .attr("y", 290)
+    .text("= 500,000")
+    
+    svg.append("text")
+    .attr("x", 1700)
+    .attr("y", 305)
+    .text("deaths")
+    
+    //TypeScale info
+    svg.append("text")
+    .attr("x", 1635)
+    .attr("y", 400)
+    .style("font-size", "1.5em")
+    .text("Disease Type")
+    .style("text-decoration", "underline");
+    
+    svg.append("rect")
+    .attr("x", 1610)
+    .attr("y", 420)
+    .style("opacity", 0.6)
+    .style("height", "25px")
+    .style("width", "25px")
+    .style("fill", "#00EB2E");
+    
+    svg.append("text")
+    .attr("x", 1645)
+    .attr("y", 435)
+    .text("= Bacteria")
+    
+    svg.append("rect")
+    .attr("x", 1610)
+    .attr("y", 450)
+    .style("opacity", 0.6)
+    .style("height", "25px")
+    .style("width", "25px")
+    .style("fill", "#D8A404");
+    
+    svg.append("text")
+    .attr("x", 1645)
+    .attr("y", 467)
+    .text("= Virus")
+    
+    svg.append("rect")
+    .attr("x", 1610)
+    .attr("y", 480)
+    .style("opacity", 0.6)
+    .style("height", "25px")
+    .style("width", "25px")
+    .style("fill", "#bf40bf");
+    
+    svg.append("text")
+    .attr("x", 1645)
+    .attr("y", 500)
+    .text("= Parasite")
+});
+
+</script>
+</body>
+</html>

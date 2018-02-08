@@ -1,0 +1,110 @@
+Year	Country	Continent	SubType	Name	Killed
+1920	India	Asia	Bacterial Infectious Diseases	Bubonic & Cholera	2500000
+1917	Soviet Union	Europe	Bacterial Infectious Diseases	Typhus	2500000
+1909	China P Rep	Asia	Bacterial Infectious Diseases	Bubonic	1500000
+1907	India	Asia	Bacterial Infectious Diseases	Bubonic	1300000
+1926	India	Asia	Viral Infectious Diseases		423000
+1918	Bangladesh	Asia	Viral Infectious Diseases	Influenza	393000
+1924	India	Asia	Bacterial Infectious Diseases	Cholera	300000
+1901	Uganda	Africa	Parasitic Infectious Diseases	Sleeping Sickness	200000
+1923	Niger	Africa	Bacterial Infectious Diseases		100000
+1910	China P Rep	Asia	Bacterial Infectious Diseases	Pneumonic	60000
+1918	Canada	Americas	Viral Infectious Diseases	Influenza	50000
+1996	Burkina Faso, Cameroon, Ghana, Guinea Bissau, Mali, Niger, Nigeria, Somalia, Sudan, Togo, Zaire	Africa	Bacterial Infectious Diseases	Cholera, Meningococcal disease, Cerebro spinal	14047
+1991	El Salvador, Guatemala, Bolivia, Brazil, Colombia, Ecuador, Peru	Americas	Bacterial Infectious Diseases	Cholera	11279
+1988	Ethiopia, Chad, Sudan	Africa	Bacterial Infectious Diseases		10588
+1947	Egypt	Africa	Bacterial Infectious Diseases	Cholera	10276
+1991	Cameroon, Chad, Niger, Nigeria, Tanzania	Africa	Bacterial Infectious Diseases	Cholera	9657
+1997	Burkina Faso, Chad, Gambia, Guinea Bissau, Kenya, Mali, Mozambique, Niger, Tanzania	Africa	Bacterial Infectious Diseases		8143
+1998	Angola, Cameroon, Mozambique, Senegal, Somalia, Sudan, Tanzania, Togo, Zaire	Africa	Bacterial Infectious Diseases	Meningococcal disease, Cholera	5887
+1991	Bangladesh, China P Rep, India, Nepal	Asia	Bacterial Infectious Diseases	Cholera	5294
+1991	Nigeria, Niger, Zaire	Africa	Viral Infectious Diseases	Yellow fever	3518
+1984	India, Indonesia	Asia	Parasitic Infectious Diseases	Dysentery	3395
+1999	Angola, Guinea Bissau, Kenya, Madagascar, Sudan, Zambia	Africa	Bacterial Infectious Diseases	Cholera	3372
+1995	Niger, Senegal	Africa	Bacterial Infectious Diseases	Cholera	3210
+1967	India	Asia	Viral Infectious Diseases		3029
+1985	Ethiopia, Senegal, Sierra Leone, Somalia	Africa	Bacterial Infectious Diseases	Cholera	3015
+1988	India	Asia	Viral Infectious Diseases	Encaphalitis	3000
+1998	Cambodia, India, Indonesia, Malaysia, Nepal, Papua New Guinea, Philippines, Vietnam	Asia	Viral Infectious Diseases	Dengue fever, Japanese encephalitis, Encephalitis, Acute respiratory syndrome	2850
+1982	Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	2696
+1981	Burkina Faso, Ethiopia, Mali	Africa	Bacterial Infectious Diseases		2493
+1971	Chad	Africa	Bacterial Infectious Diseases	Cholera	2312
+1969	Nigeria, Burkina Faso	Africa	Viral Infectious Diseases	Yellow fever, Meningitis, measles	2304
+1935	Uganda	Africa	Bacterial Infectious Diseases	Bubonic	2000
+1978	India	Asia	Viral Infectious Diseases	Encephalitis	2000
+1992	Burundi, Cameroon, Mozambique, Zimbabwe	Africa	Bacterial Infectious Diseases	Cholera	1796
+1985	Bangladesh, India	Asia	Bacterial Infectious Diseases	Cholera, Meningococcal disease	1699
+1940	Sudan	Africa	Viral Infectious Diseases	Yellow fever	1500
+1974	Brazil	Americas	Bacterial Infectious Diseases		1500
+1998	Sudan	Africa	Viral Infectious Diseases	Acute respiratory syndrome, Acute diarrhoeal syndrome	1480
+1989	Angola, Benin, Uganda, Niger	Africa	Bacterial Infectious Diseases	Cholera, Meningococcal disease	1317
+1996	Zimbabwe	Africa	Parasitic Infectious Diseases		1311
+1986	Somalia	Africa	Bacterial Infectious Diseases	Cholera	1307
+1984	India	Asia	Viral Infectious Diseases		1160
+1984	Mali, Ghana	Africa	Bacterial Infectious Diseases	Cholera	1125
+1990	Mozambique, Tanzania, Uganda	Africa	Bacterial Infectious Diseases	Cholera, Meningococcal disease	1091
+1992	Guatemala, Ecuador	Americas	Bacterial Infectious Diseases	Cholera	1006
+1998	Afghanistan, Bangladesh, India	Asia	Bacterial Infectious Diseases	Cholera	1003
+1986	Nigeria	Africa	Viral Infectious Diseases	Yellow fever	1000
+1994	Kenya	Africa	Parasitic Infectious Diseases		1000
+1963	Nepal	Asia	Viral Infectious Diseases		1000
+1985	India	Asia	Viral Infectious Diseases	Encaphalitis	1000
+1984	Bangladesh	Asia	Parasitic Infectious Diseases	Dysentery	950
+1988	India	Asia	Bacterial Infectious Diseases	Cholera	911
+1970	Ethiopia, Niger	Africa	Bacterial Infectious Diseases	Cholera	819
+1997	Kenya, Somalia	Africa	Viral Infectious Diseases	Rift Valley fever	800
+1992	Nepal, Lao P Dem Rep	Asia	Viral Infectious Diseases	Gastroenteritis	783
+1994	Cape Verde, Guinea, Guinea Bissau	Africa	Bacterial Infectious Diseases	Cholera	751
+1980	India	Asia	Bacterial Infectious Diseases	Cholera	640
+1964	Vietnam	Asia	Bacterial Infectious Diseases	Cholera	598
+1998	Tanzania	Africa	Parasitic Infectious Diseases		590
+1996	Nepal, India, Indonesia	Asia	Viral Infectious Diseases	Encephalitis, Dengue fever	589
+1999	Kenya	Africa	Parasitic Infectious Diseases		563
+1987	Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	550
+1993	Cameroon	Africa	Bacterial Infectious Diseases		513
+1969	Mali	Africa	Bacterial Infectious Diseases		500
+1977	Tanzania	Africa	Bacterial Infectious Diseases	Cholera	500
+1983	Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	500
+1994	Lao P Dem Rep	Asia	Bacterial Infectious Diseases	Cholera	500
+1999	Afghanistan, India, Nepal	Asia	Viral Infectious Diseases	Acute respiratory syndrome, Japanese encephalitis	485
+1953	Canada	Americas	Viral Infectious Diseases	Polio	481
+1980	Liberia	Africa	Bacterial Infectious Diseases	Cholera	466
+1965	Turkey	Asia	Viral Infectious Diseases		461
+1987	Zaire/Congo Dem Rep	Africa	Bacterial Infectious Diseases	Cholera	450
+1980	India	Asia	Viral Infectious Diseases	Encephalitis	400
+1969	Ecuador	Americas	Viral Infectious Diseases	Equine encephalitis	400
+1976	Zaire/Congo Dem Rep, Sudan	Africa	Viral Infectious Diseases	Ebola haemorrhagic fever	395
+1987	Mali, Nigeria	Africa	Viral Infectious Diseases	Yellow fever	359
+1978	India, Bahrain, Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	353
+1995	Bangladesh	Asia	Parasitic Infectious Diseases		350
+1997	Indonesia, Tajikistan	Asia	Bacterial Infectious Diseases	Cholera, Typhoid	318
+1984	Brazil	Americas	Viral Infectious Diseases	Gastroenteritis	300
+1965	Iran	Asia	Bacterial Infectious Diseases	Cholera	288
+1991	Malaysia	Asia	Viral Infectious Diseases	Dengue fever	263
+1977	Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	260
+1979	Burkina Faso	Africa	Bacterial Infectious Diseases		241
+1995	Zaire/Congo Dem Rep	Africa	Viral Infectious Diseases	Ebola haemorrhagic fever	233
+1978	Maldives	Asia	Bacterial Infectious Diseases	Cholera	219
+1979	India	Asia	Bacterial Infectious Diseases	Cholera	215
+1986	India	Asia	Viral Infectious Diseases		210
+1995	Ukraine	Europe	Bacterial Infectious Diseases		204
+1966	Morocco	Africa	Bacterial Infectious Diseases	Cerebral meningitis	200
+1978	Gambia	Africa	Viral Infectious Diseases	Yellow fever	200
+1989	India	Asia	Viral Infectious Diseases	Dengue	200
+1990	Vietnam	Asia	Parasitic Infectious Diseases		200
+1992	Bangladesh	Asia	Bacterial Infectious Diseases	Cholera	200
+1988	Peru	Americas	Viral Infectious Diseases		200
+1990	Guatemala	Americas	Viral Infectious Diseases		200
+1983	Mozambique	Africa	Bacterial Infectious Diseases	Cholera	189
+1988	Botswana	Africa	Parasitic Infectious Diseases		183
+1980	Ethiopia	Africa	Parasitic Infectious Diseases	Dysentery	157
+1986	Sao Tome et Principe	Africa	Parasitic Infectious Diseases		150
+1990	Nepal	Asia	Bacterial Infectious Diseases	Cholera	150
+1969	Korea Rep	Asia	Bacterial Infectious Diseases	Cholera	137
+1999	Sierra Leone	Africa	Viral Infectious Diseases	Dysentery	132
+1969	Burkina Faso	Africa	Viral Infectious Diseases	Yellow fever	130
+1995	Nepal	Asia	Viral Infectious Diseases	Encephalitis	126
+1983	Indonesia	Asia	Parasitic Infectious Diseases		120
+1990	Cameroon	Africa	Viral Infectious Diseases	Yellow fever	118
+1982	India	Asia	Viral Infectious Diseases	Encephalitis	118
+1996	Sierra Leone	Africa	Viral Infectious Diseases	Lassa fever	110
