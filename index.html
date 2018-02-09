@@ -26,11 +26,17 @@ var svg = d3.select("svg");
     
     //title
     svg.append("text")
-    .attr("x", 35)
-    .attr("y", 45)
+    .attr("x", 30)
+    .attr("y", 35)
     .style("font-weight", "bold")
-    .style("font-size", "2.75em")
+    .style("font-size", "2.55em")
     .text("World Epidemics in the 20th Century")
+    
+    svg.append("text")
+    .attr("x", 30)
+    .attr("y", 55)
+    .style("font-size", "1.25em")
+    .text("How Advances in Medicine and Pest Control Impacted Epidemic Death Tolls")
     
     //africa info
     svg.append("text")
@@ -217,7 +223,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     //Penicilin line
     svg.append("line")
     .attr("x1", xScale(1931))
-    .attr("y1", 90)
+    .attr("y1", 100)
     .attr("x2", xScale(1931))
     .attr("y2", 825)
     .style("stroke", "red")
@@ -225,14 +231,14 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     
     svg.append("text")
     .attr("x", xScale(1931))
-    .attr("y", 85)
+    .attr("y", 95)
     .style("font-size", "1.2em")
     .text("1931 - Penicilin Invented");
     
     //Flu Vaccine line
     svg.append("line")
     .attr("x1", xScale(1938))
-    .attr("y1", 115)
+    .attr("y1", 125)
     .attr("x2", xScale(1938))
     .attr("y2", 825)
     .style("stroke", "red")
@@ -240,14 +246,14 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     
     svg.append("text")
     .attr("x", xScale(1938))
-    .attr("y", 110)
+    .attr("y", 120)
     .style("font-size", "1.2em")
     .text("1938 - First Flu and Yellow Fever Vaccines Developed");
     
     //DDT line
     svg.append("line")
     .attr("x1", xScale(1939))
-    .attr("y1", 140)
+    .attr("y1", 150)
     .attr("x2", xScale(1939))
     .attr("y2", 825)
     .style("stroke", "red")
@@ -255,7 +261,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     
     svg.append("text")
     .attr("x", xScale(1939))
-    .attr("y", 135)
+    .attr("y", 145)
     .style("font-size", "1.2em")
     .text("1939 - DDT first used as pesticide");
     
