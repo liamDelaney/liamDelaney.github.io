@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Epidemics in the 20th Century</title>
+<title>World Epidemics in the 20th Century</title>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 <style>
@@ -29,8 +29,8 @@ var svg = d3.select("svg");
     .attr("x", 35)
     .attr("y", 45)
     .style("font-weight", "bold")
-    .style("font-size", "2.35em")
-    .text("Epidemics in the 20th Century")
+    .style("font-size", "2.75em")
+    .text("World Epidemics in the 20th Century")
     
     //africa info
     svg.append("text")
@@ -135,13 +135,14 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
         })
 		.attr("r", function(d) {return circleScale(Math.sqrt(d.Killed/Math.PI))})
         .attr("stroke", "black")
+        .attr("stroke-width", "1.1px")
 		.style("opacity", 0.7)
         .style("fill", function(d){
             if(d.Subtype == "Bacterial Infectious Diseases"){
-                return '#00EB2E';
+                return '#33ff5c';
             }
             else if(d.Subtype == "Viral Infectious Diseases"){
-                return '#D8A404';
+                return '#ffa31a';
             }
             else{
                 return '#bf40bf';
@@ -241,7 +242,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .attr("x", xScale(1938))
     .attr("y", 110)
     .style("font-size", "1.2em")
-    .text("1938 - First Flu Vaccine Developed");
+    .text("1938 - First Flu and Yellow Fever Vaccines Developed");
     
     //DDT line
     svg.append("line")
@@ -258,6 +259,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .style("font-size", "1.2em")
     .text("1939 - DDT first used as pesticide");
     
+    
     //DeathScale info
     svg.append("text")
     .attr("x", 1645)
@@ -272,6 +274,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .attr("r", circleScale(Math.sqrt(1000/Math.PI)))
     .style("opacity", 0.6)
     .attr("stroke", "black")
+    .attr("stroke-width", "1.1px")
     .style("fill", "gray");
     
     svg.append("text")
@@ -285,6 +288,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .style("opacity", 0.6)
     .attr("stroke", "black")
     .attr("r", circleScale(Math.sqrt(10000/Math.PI)))
+    .attr("stroke-width", "1.1px")
     .style("fill", "gray");
     
     svg.append("text")
@@ -298,6 +302,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .style("opacity", 0.6)
     .attr("stroke", "black")
     .attr("r", circleScale(Math.sqrt(100000/Math.PI)))
+    .attr("stroke-width", "1.1px")
     .style("fill", "gray");
     
     svg.append("text")
@@ -311,6 +316,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .attr("r", circleScale(Math.sqrt(500000/Math.PI)))
     .style("opacity", 0.6)
     .attr("stroke", "black")
+    .attr("stroke-width", "1.1px")
     .style("fill", "gray");
     
     svg.append("text")
@@ -350,7 +356,7 @@ d3.tsv("epidemic.tsv", parseLine, function (error, data) {
     .style("opacity", 0.6)
     .style("height", "25px")
     .style("width", "25px")
-    .style("fill", "#D8A404");
+    .style("fill", "#ffa31a");
     
     svg.append("text")
     .attr("x", 1645)
