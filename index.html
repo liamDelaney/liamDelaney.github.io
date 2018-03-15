@@ -990,6 +990,7 @@
 
             context.append("g")
                 .attr("class", "brush")
+                .attr("stroke", "#262626")
                 .call(brush)
                 .call(brush.move, x.range());
         });
