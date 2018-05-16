@@ -1,0 +1,138 @@
+body {
+    overflow: hidden;
+}
+.jqueryline{
+  
+  transition: borderColor 0.4s ease;
+}
+#floatbox h3{
+  font-size: 1.2em;
+}
+#floatbox{
+  position:absolute;
+  background-color: rgba(255,255,255,1);
+  width: 150px;
+  height: 115px;
+  font-size: 0.8em;
+  padding-left: 12px;
+  padding-top: 12px;
+  border: 2px solid rgba(0,0,0,0.1);
+  transform:translate(0px,0px) scale(0,0);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+#floatboxline{
+  stroke: rgba(0,0,0,0.2);
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  transition: stroke-width 0.2s ease;
+}
+#floatbox.open{
+  
+  transform:translate(20px,-140px) scale(1,1);
+  transition: transform 0.2s ease;
+  
+}
+.text-btc {
+  color: #FAB915;
+  fill: #FAB915;
+}
+
+.text-eth {
+  color: #324D5C;
+  fill: #324D5C;
+}
+
+.text-ltc {
+  color: #46B29D;
+  fill: #46B29D;
+}
+
+svg path.line {
+  stroke: #FAB915;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  transition: stroke-width 0.2s ease;
+}
+
+svg path.line2 {
+  stroke: #FAB915;
+  opacity:0.0;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 25.5;
+  //cursor: pointer;
+  cursor: crosshair;
+  transition: opacity 0.2s ease;
+  
+}
+
+svg .dot {
+  opacity: 1;
+  stroke: #FAB915;
+  stroke-width: 1px;
+  cursor: pointer;
+  fill: #fff;
+  r: 5;
+  transition: r 0.2s ease;
+}
+
+svg .dot:hover {
+  fill: #fdeab8;
+}
+
+svg line.timeline {
+  stroke-width: 1;
+  stroke: #00000050;
+}
+
+svg .vertical-line {
+  stroke: none;
+  pointer-events: none;
+}
+
+svg .vertical-line.active {
+  stroke: #00000050;
+}
+
+svg .vertical-line.active-event {
+  stroke: #FAB915;
+}
+
+svg .dot.active {
+  stroke-width: 2px;
+  r: 10;
+  transition: r 0.2s ease;
+}
+
+svg .axis>.tick>line {
+  shape-rendering: crispEdges;
+  stroke: #00000050;
+}
+
+#event-box {
+  width: 400px;
+  height: 200px;
+  pointer-events: none;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#event-box .title, #event-box .title>div {
+  height: 30px;
+}
+
+.buttonBar{
+    padding-left: 17%;
+}
+#zoomIcon{
+    height: 24px;
+    width: 24px;
+}
+#zoomIn, #zoomOut{
+    height: 36px;
+}

@@ -1,0 +1,8 @@
+extends:   airbnb-base
+globals:
+  _:       true
+  d3:      true
+  $:       true
+  moment:  true
+env:
+  browser: true
