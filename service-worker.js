@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.7eee31dfec9ae955b8a9289f96ff65f3.js"
+  "/precache-manifest.2a3e5aaf6535beb5ce3d0cf8ecf3ee6a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "git-workshop"});
